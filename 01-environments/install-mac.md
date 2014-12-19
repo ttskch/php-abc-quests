@@ -1,10 +1,10 @@
 # Apache と PHP をインストールする（Mac）
 
-実は、Mac には Apache も PHP も初めからインストールされています。なので、ここでは設定の変更方法や起動方法を覚えましょう。
+実は、Mac には Apache も PHP も初めからインストールされています。なので、ここでは設定の変更方法や起動方法を覚えて、Web サーバ環境を準備しましょう。
 
 ## Apache を起動する
 
-以下のコマンドで Apache の起動・終了・再起動ができます。
+まずはデフォルトの設定のままで Apache を起動してみましょう。以下のコマンドで Apache の起動・終了・再起動ができます。
 
 ```bash
 # 起動
@@ -17,7 +17,7 @@ $ sudo apachectl stop
 $ sudo apachectl restart
 ```
 
-Apache が起動している状態で、ブラウザを開いて http://localhost/index.html.en にアクセスしてみてください。
+Apache が起動している状態で、ブラウザを開いて [http://localhost/index.html.en](http://localhost/index.html.en) にアクセスしてみてください。
 
 ```
 It works!

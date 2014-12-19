@@ -6,8 +6,12 @@
 * Web アプリの仕組みについてのおおまかな理解
 * PHP の開発環境についてのおおまかな理解
 
-## 課題
+## :book: 勉強
 
 * [CLI の使い方を学ぶ](cli.md)
 * [Web アプリの仕組みを理解する](webapp.md)
+
+## :memo: 課題
+
 * [Apache と PHP をインストールする](install.md)
+* [Git をインストールする](git.md)

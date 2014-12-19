@@ -1,18 +1,15 @@
 # GitHub のアカウントを作成する
 
-[GitHub](https://github.com/)（[Wikipedia](http://ja.wikipedia.org/wiki/GitHub)） は、[Git](http://ja.wikipedia.org/wiki/Git) というバージョン管理システムのリポジトリを提供してくれる Web サービスです。
+[GitHub](http://ja.wikipedia.org/wiki/GitHub) は、Git のリポジトリを提供してくれる Web サービスです。
+管理するソースコードを公開してもいい場合なら完全無料で利用できます。
 
-> Git について詳しく理解したい方は、[サルでもわかるGit入門](http://www.backlog.jp/git-guide/) が分かりやすくておすすめです。
-
-今風なプログラマなら誰もが使っている神サービスです。チーム開発はもちろん、ちょっとした個人開発でも開発が捗ること間違いなしなので、ぜひ積極的に利用しましょう。ソースを公開してよい場合は完全に無料で利用できます。
-
-php-abc-quest では、作ったプログラムを GitHub のリポジトリで管理しながら課題を進めていくことを想定しています。
+php-abc-quest では、GitHub を使いながら課題を進めていきますので、何はともあれ GitHub のアカウントを作成しておきましょう。
 
 ## サインアップ
 
-いきなり余談ですが、英語のサイトを見ていると `Sign in`, `Log in`, `Sign up` など似たような言葉が出てきて困惑しがちですが、日本語で言うと
+いきなり余談ですが、英語の Web サービスを利用しようとすると `Log in`, `Sign in`, `Sign up` など似たような言葉が出てきて困惑しがちですが、日本語で言うと
 
-* ログイン = `Sign in` / `Log in`
+* ログイン = `Log in` / `Sign in`
 * 会員登録 = `Sign up`
 
 なので、覚えておきましょう。
