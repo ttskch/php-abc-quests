@@ -13,5 +13,5 @@
 
 ## :memo: 課題
 
-* [Apache と PHP をインストールする](install.md)
-* [Git をインストールする](git.md)
+* [CLI 環境を整える](install-cli.md)
+* [Apache と PHP をインストールする](install-apache-php.md)

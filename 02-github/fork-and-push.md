@@ -17,6 +17,9 @@ $ git config --global user.email "[GitHub に登録したメールアドレス]"
 
 # git コマンドで表示される内容を色付きにして見やすくする
 $ git config --global color.ui auto
+
+# 日本語のファイル名が文字化けしないようにする
+$ git config --global core.quotepath false
 ```
 
 ## qckanemoto/php-abc-quest を fork してみる
