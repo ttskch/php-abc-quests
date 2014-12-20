@@ -47,9 +47,15 @@ $ brew update
 $ brew install git
 ```
 
-これで Git のインストールは完了です。
+これで Git のインストールは完了ですが、今後の Mac 上での Git ライフがより快適になるように一つだけおまじないを実行しておきましょう。
 
-> Homebrew では他にも様々なコマンドを必要に応じてインストールできるので、CLI に慣れてきたら色々便利なコマンドを追加してみると良いでしょう。
+```bash
+$ curl https://raw.githubusercontent.com/github/gitignore/master/Global/OSX.gitignore > ~/.gitignore_global
+```
+
+何も言わずにこれを実行しておいてください。（Git に詳しくなった頃にまた思い出して見返してみてください :smiley: ）
+
+> ちなみに、Homebrew では他にも様々なコマンドを必要に応じてインストールできるので、CLI に慣れてきたら色々便利なコマンドを追加してみると良いでしょう。
 >
 > 例えば、`sl` コマンドをインストールして実行してみてください。
 >
