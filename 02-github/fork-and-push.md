@@ -2,7 +2,7 @@
 
 GitHub のアカウントができたので、記念すべき最初のリポジトリを作ってみましょう。
 
-全く新しいプロジェクトを始める場合は空のリポジトリを作って開発を始めるのが普通ですが、php-abc-quest では、あなたの GitHub アカウント上に [qckanemoto/php-abc-quest](https://github.com/qckanemoto/php-abc-quest) のコピーを作成して、そこで課題のソースコードを管理していきます。
+全く新しいプロジェクトを始める場合は空のリポジトリを作って開発を始めるのが普通ですが、php-abc-quests では、あなたの GitHub アカウント上に [qckanemoto/php-abc-quest](https://github.com/qckanemoto/php-abc-quest) のコピーを作成して、そこで課題のソースコードを管理していきます。
 
 このように、GitHub では他人のリポジトリを自分のアカウント配下にコピーしてくることができ、これを **fork（フォーク）する** と言います。
 
@@ -22,13 +22,13 @@ $ git config --global color.ui auto
 $ git config --global core.quotepath false
 ```
 
-## qckanemoto/php-abc-quest を fork してみる
+## qckanemoto/php-abc-quests を fork してみる
 
 では、本題に戻ります。
 
 今見ている画面の右上に、`Fork` と書かれたボタンがあると思います。これを右クリックして新しいタブで開いてください。
 
-しばらく待つと、あなたのアカウントの配下に php-abc-quest リポジトリがコピーされます。
+しばらく待つと、あなたのアカウントの配下に php-abc-quests リポジトリがコピーされます。
 
 fork した時点では、元のリポジトリのコミットログがすべて引き継がれていますが、今後ファイルを追加したり編集したりしても、当然ながら元のリポジトリには一切影響せず、自分のリポジトリ側だけに引き続きコミットが積み上がっていくような形になります。
 
@@ -44,19 +44,19 @@ fork して作ったあなたのリポジトリを GitHub で表示すると、�
 
 ```bash
 $ cd ~/workspace
-$ git clone https://github.com/hogehoge/php-abc-quest.git
+$ git clone https://github.com/hogehoge/php-abc-quests.git
 ```
 
-これで、`~/workspace` の直下に `php-abc-quest` というディレクトリが作られ、そこにリモートリポジトリの内容が全てダウンロードされたはずです。
+これで、`~/workspace` の直下に `php-abc-quests` というディレクトリが作られ、そこにリモートリポジトリの内容が全てダウンロードされたはずです。
 
 ## ローカルで作業してみる
 
 では、ローカルリポジトリで実際に何か作業をしてみましょう。
 
-`~/workspace/php-abc-quest/practices/02` というディレクトリがあるので、そこに `hello-git.txt` というファイルを作ってみてください。
+`~/workspace/php-abc-quests/practices/02` というディレクトリがあるので、そこに `hello-git.txt` というファイルを作ってみてください。
 
 ```bash
-$ cd ~/workspace/php-abc-quest/practices/02
+$ cd ~/workspace/php-abc-quests/practices/02
 
 # "hello-git.txt" というファイルを作ってみる
 $ touch hello-git.txt

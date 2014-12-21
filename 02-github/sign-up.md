@@ -3,7 +3,7 @@
 [GitHub](http://ja.wikipedia.org/wiki/GitHub) は、Git のリポジトリを提供してくれる Web サービスです。
 管理するソースコードを公開してもいい場合なら完全無料で利用できます。
 
-php-abc-quest では、GitHub を使いながら課題を進めていきますので、何はともあれ GitHub のアカウントを作成しておきましょう。
+php-abc-quests では、GitHub を使いながら課題を進めていきますので、何はともあれ GitHub のアカウントを作成しておきましょう。
 
 ## サインアップ
 

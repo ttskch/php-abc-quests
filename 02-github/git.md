@@ -2,7 +2,7 @@
 
 チーム開発はもちろん、個人で開発する場合でもソースコードのバージョン管理は重要です。適切にバージョン管理システムを活用すれば、快適で効率の良いプログラミングが可能になります。
 
-php-abc-quest では、[Git](http://ja.wikipedia.org/wiki/Git) というバージョン管理システムを使いながら課題を進めていきます。
+php-abc-quests では、[Git](http://ja.wikipedia.org/wiki/Git) というバージョン管理システムを使いながら課題を進めていきます。
 
 Git の操作は CLI 上で `git` コマンドを使って行います。
 操作に慣れていない方は Git の概念や基本的なコマンドの使用方法などについてここで理解しておきましょう。
@@ -108,8 +108,8 @@ Git では、Git の管理下に置かれた、あなたが実際に作業して
 
 ```bash
 $ cd ~/workspace
-$ git clone https://github.com/qckanemoto/php-abc-quest.git
-$ cd php-abc-quest
+$ git clone https://github.com/qckanemoto/php-abc-quests.git
+$ cd php-abc-quests
 ```
 
 ### git add
