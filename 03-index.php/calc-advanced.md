@@ -52,4 +52,4 @@ if ($left && $operator && $right) {
 
 ## 参考
 
-* [参考演算子](http://php.net/manual/ja/language.operators.comparison.php)
+* [三項演算子](http://php.net/manual/ja/language.operators.comparison.php)
