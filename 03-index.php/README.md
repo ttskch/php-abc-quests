@@ -10,6 +10,7 @@
 * [PHP プログラムの仕組みを理解する](introduction.md)
 * [おみくじプログラム](omikuji.md)
 * [簡易電卓プログラム](calc.md)
+* [簡易電卓プログラムの脆弱性対策](calc-security.md)
 * [メールを送信するプログラム](sendmail.md)
 
 ## :memo: 課題
