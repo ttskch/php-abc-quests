@@ -10,7 +10,7 @@
 ```
 ~/workspace/php-abc-quests/practices/03/calc/index.php
 ```
-```html
+```php
 <?php
 $answer = 100;
 ?>
@@ -56,7 +56,7 @@ $answer = 100;
 
 まずは仮の処理になりますが、プログラムを以下のように書き換えてみてください。
 
-```html
+```php
 <?php
 if (isset($_POST['left'])) {
     $answer = $_POST['left'];

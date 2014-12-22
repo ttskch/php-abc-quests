@@ -6,7 +6,7 @@ PHP はもともと **HTML の中に部分的にプログラムを埋め込む**
 
 百聞は一見に如かずです。試しに `~/workspace/php-abc-quests/practices/03/introduction/index.php` を作成して以下のコードを書いてみてください。
 
-```html
+```php
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +32,7 @@ Hello, World!
 
 では今度はコードを少しいじって以下のようにしてみてください。
 
-```html
+```php
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +62,7 @@ Hello, PHP!
 
 ではさらにプログラムっぽく変数と配列を使ってみましょう。
 
-```html
+```php
 <?php
 $words = array('World', 'PHP', 'Web Application');
 ?>
@@ -93,7 +93,7 @@ $words = array('World', 'PHP', 'Web Application');
 >
 > PHP では変数名は常に `$` で始まる必要があります。
 
-```html
+```php
     <p>Hello, <?php echo $words[0]; ?>!</p>
     <p>Hello, <?php echo $words[1]; ?>!</p>
     <p>Hello, <?php echo $words[2]; ?>!</p>
@@ -112,7 +112,7 @@ Hello, Web Application!
 さて、ここで賢明なプログラマなら 3 つの要素をベタ書きで出力せずにループを回したくなるはずです。
 PHP にはループ文として [for](http://php.net/manual/ja/control-structures.for.php), [foreach](http://php.net/manual/ja/control-structures.foreach.php), [while](http://php.net/manual/ja/control-structures.while.php), [do-while](http://php.net/manual/ja/control-structures.do.while.php) が用意されていますが、このように配列の中身を順次処理したい場合には `foreach` が便利です。
 
-```html
+```php
 <?php
 $words = array('World', 'PHP', 'Web Application');
 ?>
@@ -131,7 +131,7 @@ $words = array('World', 'PHP', 'Web Application');
 
 このコードは以下のように書いても全く同じ動作になります。
 
-```html
+```php
 <?php
 $words = array('World', 'PHP', 'Web Application');
 ?>
