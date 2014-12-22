@@ -4,7 +4,7 @@
 
 PHP はもともと **HTML の中に部分的にプログラムを埋め込む** ためのものでした。
 
-百聞は一見に如かずです。試しに `~/workspace/practices/03/introduction/index.php` を作成して以下のコードを書いてみてください。
+百聞は一見に如かずです。試しに `~/workspace/php-abc-quests/practices/03/introduction/index.php` を作成して以下のコードを書いてみてください。
 
 ```html
 <!DOCTYPE html>

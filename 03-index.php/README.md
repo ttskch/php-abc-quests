@@ -8,8 +8,8 @@
 ## :book: 勉強
 
 * [PHP プログラムの仕組みを理解する](introduction.md)
-* [今日の日付を表示するだけのプログラム](date.md)
-* [入力された日付の曜日を出力するプログラム](date-form.md)
+* [おみくじプログラム](omikuji.md)
+* [簡易電卓プログラム](calc.md)
 * [メールを送信するプログラム](sendmail.md)
 
 ## :memo: 課題
