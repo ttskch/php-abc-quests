@@ -2,7 +2,9 @@
 
 PHP でのプログラム開発には [CLI](http://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%A6%E3%83%BC%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9) を頻繁に使います。CLI に慣れていない方は、まず事前準備として CLI の基本的な使い方を覚えておきましょう。
 
-php-abc-quests では、CLI のソフトとして
+![image](assets/img/cli-01.png)
+
+上図は CLI の画面例です。php-abc-quests では、CLI のソフトとして
 
 * Mac の場合：`ターミナル`（Launchpad の「その他」の中にあります）
 * Windows の場合：`Git Bash`（次の章でインストールします）
