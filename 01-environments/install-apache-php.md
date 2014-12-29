@@ -1,10 +1,23 @@
 # Apache と PHP をインストールする
 
+## 目次
+
+* [インストール](#install)
+* [Apache を起動する](#run-apache)
+* [ローカルサーバにブラウザでアクセスしてみる](#localhost)
+* [Apache の設定を変更する](#setup-apache)
+* [PHP のページを表示してみる](#php)
+
+> 途中、Mac と Windows で実施する内容が分岐するところが出てきますが、自分に関係ない方は読み飛ばして問題ありません。
+
+<a name="install"></a>
 ## インストール
 
 ### Mac の場合
 
 実は、Mac には Apache も PHP も初めからインストールされているので、インストール作業は不要です。
+
+[次へ進む](#run-apache)
 
 ### Windows の場合
 
@@ -14,6 +27,9 @@ Windows の場合、[XAMPP](http://ja.wikipedia.org/wiki/XAMPP) というソフ�
 
 > Windows7 ではインストーラを起動すると警告が出るかもしれませんが、気にせず OK して大丈夫です。
 
+[次へ進む](#run-apache)
+
+<a name="run-apache"></a>
 ## Apache を起動する
 
 まずはデフォルトの設定のままで Apache を起動してみましょう。
@@ -33,6 +49,8 @@ $ sudo apachectl stop
 $ sudo apachectl restart
 ```
 
+[次へ進む](#localhost)
+
 ### Windows の場合
 
 Windows では、XAMPP を起動して Apache の `Start` ボタンをクリックすれば Apache を起動できます。
@@ -44,6 +62,9 @@ Apache が起動している状態ではボタンが `Stop` になっていま�
 >
 > この場合は、Skype が 80, 443 のポートを使わないように設定変更してから Apache を起動してください。
 
+[次へ進む](#localhost)
+
+<a name="localhost"></a>
 ## ローカルサーバにブラウザでアクセスしてみる
 
 Apache が起動している状態で、ブラウザを開いて以下の URL にアクセスしてみてください。
@@ -64,6 +85,9 @@ It works!
 * Mac の場合：`$ view /Library/WebServer/Documents/index.html.en`
 * Windows の場合：`C:¥xampp¥htdocs¥index.html` をテキストエディタで開く
 
+[次へ進む](#setup-apache)
+
+<a name="setup-apache"></a>
 ## Apache の設定を変更する
 
 初めに Apache の設定をいくつか変更しておく必要があります。
@@ -74,10 +98,10 @@ Apache の設定ファイルは、Mac, Windows それぞれ以下の箇所にあ
 
 変更したい箇所は Mac と Windows で異なりますので、以下はそれぞれの環境に合わせて実施してください。
 
-* [Mac の場合](#mac)
-* [Windows の場合](#win)
+* [Mac の場合](#setup-apache-mac)
+* [Windows の場合](#setup-apache-win)
 
-<a name="mac"></a>
+<a name="setup-apache-mac"></a>
 ### Mac の場合
 
 Mac の場合、変更したい箇所は以下のとおりです。
@@ -156,7 +180,9 @@ DocumentRoot "~/workspace"
 
 ここまでの変更を保存したら、Apache を再起動して変更内容を反映させてください。
 
-<a name="win"></a>
+[次へ進む](#php)
+
+<a name="setup-apache-win"></a>
 ### Windows の場合
 
 Windows の場合、変更したい箇所は以下のみです。
@@ -180,6 +206,9 @@ DocumentRoot "C:/Users/あなたのユーザ名/workspace"
 
 変更内容を反映させるには Apache の再起動が必要です。この時点ではまだ Apache の起動には失敗すると思いますので、ひとまず Apache を終了しておいてください。
 
+[次へ進む](#php)
+
+<a name="php"></a>
 ## PHP のページを表示させてみる
 
 ここまでで、PHP が実行可能な Web サーバの構築が完了しました。次は実際に動かしてみましょう。
