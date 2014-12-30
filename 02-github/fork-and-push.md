@@ -68,8 +68,7 @@ $ touch hello-git.txt
 # ローカルリポジトリの状態を確認
 $ git status
 On branch master
-
-Initial commit
+Your branch is up-to-date with 'origin/master'.
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -88,8 +87,7 @@ $ git add .
 # 状態を再確認
 $ git status
 On branch master
-
-Initial commit
+Your branch is up-to-date with 'origin/master'.
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
