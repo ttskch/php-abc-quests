@@ -13,7 +13,9 @@ GitHub のアカウントができたので、記念すべき最初のリポジ�
 ```bash
 # git コマンドのユーザ情報と GitHub のユーザ情報を合わせておく
 $ git config --global user.name "[GitHub のユーザ名]"
+# 例: git config --global user.name "hogehoge"
 $ git config --global user.email "[GitHub に登録したメールアドレス]"
+# 例: git config --global user.email "hugahuga@test.com"
 
 # git コマンドで表示される内容を色付きにして見やすくする
 $ git config --global color.ui auto
