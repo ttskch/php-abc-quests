@@ -125,6 +125,14 @@ Username for 'https://github.com': [GitHub のユーザ名]
 Password for 'https://hogehoge@github.com': [GitHub のパスワード]
 ```
 
+もし `git push` がエラーになる場合は、
+
+```bash
+$ git push --set-upstream origin master
+```
+
+と打ってください。最初の一回だけこの方法で push しておけば以降は `git push` でエラーにならなくなるので、ひとまず意味は分からなくても大丈夫です :bow:
+
 push が完了したら、GitHub の自分のリポジトリの画面を開いて、左上にある `[数字] commits` と書かれたリンクからコミット一覧画面を見てみてください。先ほどのコミットが追加されているはずです。
 
 これで GitHub の入門は完了です！お疲れさまでした！
