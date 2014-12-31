@@ -152,7 +152,7 @@ DocumentRoot "/Users/あなたのユーザ名/workspace"
 上記で変更した
 
 ```
-<Directory "~/workspace">
+<Directory "/Users/あなたのユーザ名/workspace">
     〜略〜
 </Directory>
 ```
