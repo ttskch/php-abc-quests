@@ -149,7 +149,7 @@ if (isset($_POST['operator'])) {
     <title>test</title>
 </head>
 <body>
-    <form action="test.php" method="post">
+    <form action="index.php" method="post">
         <input type="text" name="left" required autofocus/>
         <select name="operator">
             <option value="＋" selected>＋</option>
