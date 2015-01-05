@@ -23,7 +23,7 @@ if ($left && $operator && $right) {
             break;
     }
 
-    $result = "{$left} {$operator} {$left} ＝ {$answer}";
+    $result = "{$left} {$operator} {$right} ＝ {$answer}";
 } else {
     $result = '計算結果なし';
 }
@@ -34,7 +34,7 @@ if ($left && $operator && $right) {
     <title>test</title>
 </head>
 <body>
-    <form action="test.php" method="post">
+    <form action="index.php" method="post">
         <input type="text" name="left" value="<?php echo $left; ?>" required autofocus/>
         <select name="operator">
             <option value="＋" <?php if ($operator === '＋') { echo 'selected'; } ?>>＋</option>
