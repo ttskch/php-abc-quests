@@ -6,7 +6,7 @@ $left = isset($_GET['left']) ? $_GET['left'] : '';
 $operator = isset($_GET['operator']) ? $_GET['operator'] : '+';
 $right = isset($_GET['right']) ? $_GET['right'] : '';
 
-if ($left && $operator && $right) {
+if (!is_null($left) && !is_null($right)) {
     switch ($operator) {
         case '-':
             $answer = $left - $right;
@@ -52,4 +52,5 @@ if ($left && $operator && $right) {
 
 ## 参考
 
+* [is_null()](http://php.net/manual/ja/function.is-null.php)
 * [三項演算子](http://php.net/manual/ja/language.operators.comparison.php)
