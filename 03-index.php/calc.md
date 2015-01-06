@@ -17,6 +17,7 @@ $answer = 100;
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"/>
     <title>test</title>
 </head>
 <body>
@@ -67,6 +68,7 @@ if (isset($_GET['left'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"/>
     <title>test</title>
 </head>
 <body>
@@ -151,6 +153,7 @@ if (isset($_GET['operator'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8"/>
     <title>test</title>
 </head>
 <body>
