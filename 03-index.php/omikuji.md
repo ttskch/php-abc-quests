@@ -39,7 +39,7 @@ switch (rand(0, 9)) {
     <title>test</title>
 </head>
 <body>
-    <p>あなたの今日の運勢は<b><?php echo $result; ?></b>です。</p>
+<p>あなたの今日の運勢は<b><?php echo $result; ?></b>です。</p>
 </body>
 </html>
 ```

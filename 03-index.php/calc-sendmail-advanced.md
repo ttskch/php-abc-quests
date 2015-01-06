@@ -54,28 +54,28 @@ switch (strtolower($_SERVER['REQUEST_METHOD'])) {
     <title>test</title>
 </head>
 <body>
-    <form action="index.php" method="GET">
-        <input type="text" name="left" value="<?php echo $left; ?>" required autofocus/>
-        <select name="operator">
-            <option value="+" <?php if ($operator === '+') { echo 'selected'; } ?>>+</option>
-            <option value="-" <?php if ($operator === '-') { echo 'selected'; } ?>>-</option>
-            <option value="*" <?php if ($operator === '*') { echo 'selected'; } ?>>*</option>
-            <option value="/" <?php if ($operator === '/') { echo 'selected'; } ?>>/</option>
-        </select>
-        <input type="text" name="right" value="<?php echo $right; ?>" required/>
-        <input type="submit" value="計算する">
+<form action="index.php" method="GET">
+    <input type="text" name="left" value="<?php echo $left; ?>" required autofocus/>
+    <select name="operator">
+        <option value="+" <?php if ($operator === '+') { echo 'selected'; } ?>>+</option>
+        <option value="-" <?php if ($operator === '-') { echo 'selected'; } ?>>-</option>
+        <option value="*" <?php if ($operator === '*') { echo 'selected'; } ?>>*</option>
+        <option value="/" <?php if ($operator === '/') { echo 'selected'; } ?>>/</option>
+    </select>
+    <input type="text" name="right" value="<?php echo $right; ?>" required/>
+    <input type="submit" value="計算する">
+</form>
+<p><?php echo $result; ?></p>
+
+<hr>
+
+<?php if (isset($answer) && $answer % 100 === 0) { ?>
+    <p>計算結果が100の倍数になったら記念報告！</p>
+    <form action="index.php" method="POST">
+        <input type="hidden" name="result" value="<?php echo $result; ?>"/>
+        <input type="submit" value="メールで報告する"/>
     </form>
-    <p><?php echo $result; ?></p>
-
-    <hr>
-
-    <?php if (isset($answer) && $answer % 100 === 0) { ?>
-        <p>計算結果が100の倍数になったら記念報告！</p>
-        <form action="index.php" method="POST">
-            <input type="hidden" name="result" value="<?php echo $result; ?>"/>
-            <input type="submit" value="メールで報告する"/>
-        </form>
-    <?php } ?>
+<?php } ?>
 </body>
 </html>
 ```

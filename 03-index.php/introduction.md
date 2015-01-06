@@ -23,7 +23,7 @@ PHP はもともと **HTML の中に部分的にプログラムを埋め込む**
     <title>test</title>
 </head>
 <body>
-    <p>Hello, World!</p>
+<p>Hello, World!</p>
 </body>
 </html>
 ```
@@ -50,7 +50,7 @@ Hello, World!
     <title>test</title>
 </head>
 <body>
-    <p>Hello, <?php echo 'PHP'; ?>!</p>
+<p>Hello, <?php echo 'PHP'; ?>!</p>
 </body>
 </html>
 ```
@@ -84,9 +84,9 @@ $words = array('World', 'PHP', 'Web Application');
     <title>test</title>
 </head>
 <body>
-    <p>Hello, <?php echo $words[0]; ?>!</p>
-    <p>Hello, <?php echo $words[1]; ?>!</p>
-    <p>Hello, <?php echo $words[2]; ?>!</p>
+<p>Hello, <?php echo $words[0]; ?>!</p>
+<p>Hello, <?php echo $words[1]; ?>!</p>
+<p>Hello, <?php echo $words[2]; ?>!</p>
 </body>
 </html>
 ```
@@ -106,9 +106,9 @@ $words = array('World', 'PHP', 'Web Application');
 > PHP では変数名は常に `$` で始まる必要があります。
 
 ```php
-    <p>Hello, <?php echo $words[0]; ?>!</p>
-    <p>Hello, <?php echo $words[1]; ?>!</p>
-    <p>Hello, <?php echo $words[2]; ?>!</p>
+<p>Hello, <?php echo $words[0]; ?>!</p>
+<p>Hello, <?php echo $words[1]; ?>!</p>
+<p>Hello, <?php echo $words[2]; ?>!</p>
 ```
 
 その 3 つの各要素をここでそれぞれ出力しているわけですね。
@@ -135,9 +135,9 @@ $words = array('World', 'PHP', 'Web Application');
     <title>test</title>
 </head>
 <body>
-    <?php foreach ($words as $word) { ?>
-        <p>Hello, <?php echo $word; ?>!</p>
-    <?php } ?>
+<?php foreach ($words as $word) { ?>
+    <p>Hello, <?php echo $word; ?>!</p>
+<?php } ?>
 </body>
 </html>
 ```
@@ -155,11 +155,11 @@ $words = array('World', 'PHP', 'Web Application');
     <title>test</title>
 </head>
 <body>
-    <?php
-    foreach ($words as $word) {
-        echo '<p>Hello, ' . $word . '!</p>' . "\n";
-    }
-    ?>
+<?php
+foreach ($words as $word) {
+    echo '<p>Hello, ' . $word . '!</p>' . "\n";
+}
+?>
 </body>
 </html>
 ```

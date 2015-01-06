@@ -21,15 +21,15 @@ $answer = 100;
     <title>test</title>
 </head>
 <body>
-    <input type="text" name="left" required autofocus/>
-    <select name="operator">
-        <option value="+" selected>+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-    <input type="text" name="right" required/>
-    <p><?php echo $answer; ?></p>
+<input type="text" name="left" required autofocus/>
+<select name="operator">
+    <option value="+" selected>+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input type="text" name="right" required/>
+<p><?php echo $answer; ?></p>
 </body>
 </html>
 ```
@@ -72,18 +72,18 @@ if (isset($_GET['left'])) {
     <title>test</title>
 </head>
 <body>
-    <form action="index.php" method="GET">
-        <input type="text" name="left" required autofocus/>
-        <select name="operator">
-            <option value="+" selected>+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-        <input type="text" name="right" required/>
-        <input type="submit" value="計算する">
-    </form>
-    <p><?php echo $answer; ?></p>
+<form action="index.php" method="GET">
+    <input type="text" name="left" required autofocus/>
+    <select name="operator">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" name="right" required/>
+    <input type="submit" value="計算する">
+</form>
+<p><?php echo $answer; ?></p>
 </body>
 </html>
 ```
@@ -157,18 +157,18 @@ if (isset($_GET['operator'])) {
     <title>test</title>
 </head>
 <body>
-    <form action="index.php" method="GET">
-        <input type="text" name="left" required autofocus/>
-        <select name="operator">
-            <option value="+" selected>+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-        <input type="text" name="right" required/>
-        <input type="submit" value="計算する">
-    </form>
-    <p><?php echo $answer; ?></p>
+<form action="index.php" method="GET">
+    <input type="text" name="left" required autofocus/>
+    <select name="operator">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" name="right" required/>
+    <input type="submit" value="計算する">
+</form>
+<p><?php echo $answer; ?></p>
 </body>
 </html>
 ```

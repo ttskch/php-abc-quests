@@ -35,7 +35,7 @@ switch (rand(0, 9)) {
     <title>test</title>
 </head>
 <body>
-    <p><?php echo $templates[$result]; ?></p>
+<p><?php echo $templates[$result]; ?></p>
 </body>
 </html>
 ```
