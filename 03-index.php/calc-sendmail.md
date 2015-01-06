@@ -7,7 +7,10 @@
 ## 下準備
 
 PHP のプログラムからメールを送信するには、いくつかの下準備が必要になります。
-下準備の内容は Mac と Windows で異なりますので、それぞれの環境に合わせて以下のとおり実施してください。
+下準備の内容は Mac と Windows で異なりますので、それぞれの環境に合わせて実施してください。
+
+なお、Mac, Windows どちらの場合も、Gmail の SMTP サーバを利用するため、Gmail アカウントが必要になります。
+Gmail アカウントを持っていない方は [こちらで](https://accounts.google.com/SignUp?service=mail&hl=ja) アカウントを取得しておいてください。
 
 * [Mac の場合](#mac)
 * [Windows の場合](#win)
@@ -16,19 +19,78 @@ PHP のプログラムからメールを送信するには、いくつかの下�
 ### Mac の場合
 
 Mac には Apache や PHP が最初からインストールされていたのと同様に、Postfix というメールサーバが最初からインストールされています。
-なので、Mac の場合の事前準備はこの Postfix を起動する作業だけです。（PC を再起動すると Apache と同様 Postfix も終了してしまうので、注意してください）
+なので、この Postfix を起動するだけでとりあえずは PHP からメール送信ができるようになります。
 
 ```bash
 $ sudo postfix start
 ```
+
+しかし、デフォルトの設定のままで使用すると、スパムフィルタに引っかかって Gmail などのメジャーなメールアドレス宛てに送信できなかったりと環境としては不完全なので、
+少しだけ設定を変更して正常にメール送信できる環境を作っておきましょう。
+
+具体的には、Postfix でメールを送信する際に、**外部の SMTP サーバ** を使用するように設定します。ここでは Gmail の SMTP サーバを使うことにします。
+
+以下 CLI での操作になりますが、行っている内容についてはここでは特に理解しなくて OK です。間違いがないよう正確に実施してください。
+
+#### 1. 設定ファイルに追記
+
+```bash
+$ sudo vi /etc/postfix/main.cf
+```
+
+ファイルの末尾に以下を追記してください。（コピペ推奨）
+
+```
+# added
+relayhost = [smtp.gmail.com]:587
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options = noanonymous
+smtp_sasl_tls_security_options = noanonymous
+smtp_sasl_mechanism_filter = plain
+smtp_use_tls = yes
+```
+
+#### 2. Gmail 認証ファイルを作成
+
+```bash
+$ sudo vi /etc/postfix/sasl_passwd
+```
+
+新しくファイルを作成し、以下のように Gmail の認証情報を記入してください。
+
+```
+[smtp.gmail.com]:587 hogehoge@gmail.com:password
+```
+
+> `hogehoge@gmail.com` の部分をあなたの Gmail アドレス、`password` の部分をあなたの Gmail パスワードに置き換えてください。
+
+このファイルを元に、実際に送信時に使用する認証ファイルを生成します。生成後は元の平文ファイルは不要になるので、安全のため削除してください。
+
+```bash
+$ sudo postmap /etc/postfix/sasl_passwd
+$ ls rm /etc/postfix/sasl_passwd.db   # .db ファイルが作成されていることを確認
+$ sudo rm /etc/postfix/sasl_passwd    # もう用済みなので削除
+```
+
+#### 3. Postfix を再起動
+
+```bash
+$ sudo postfix stop
+$ sudo postfix start
+```
+
+> PC を再起動すると Postfix も終了してしまうので、注意してください。
+
+以上で下準備は完了です。
 
 [次へ進む](#basic)
 
 <a name="win"></a>
 ### Windows の場合
 
-Windows の場合、メールを送信できるようにするのは少し大変です。
-ここでやっていることの意味は今はまだ理解できなくてもよいので、以下を着実に実施してください。
+`php.ini` および `sendmail.ini` という 2 つの設定ファイルを編集しますが、行っている内容についてはここでは特に理解しなくて OK です。
+間違いがないよう正確に実施してください。
 
 #### php.ini の設定変更
 
@@ -56,11 +118,9 @@ sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
 次に、メール送信モジュール sendmail の設定を行います。
 sendmail の設定ファイルは `C:\xampp\sendmail\sendmail.ini` にあります。
 
-ここには、sendmail モジュールがメール送信に利用する **外部の SMTP サーバ** の情報を設定します。
-一般的な例としてここでは Gmail の SMTP サーバを使うことにします。
-Gmail アカウントを持っていない方は [ここから](https://accounts.google.com/SignUp?service=mail&hl=ja) アカウントを取得しておいてください。
+このファイルには、sendmail モジュールがメール送信に利用する **外部の SMTP サーバ** の情報を設定します。ここでは Gmail の SMTP サーバを使うことにします。
 
-Gmail アカウントの取得が済んだら、`C:\xampp\sendmail\sendmail.ini` をテキストエディタで開いて、以下の設定項目を見つけてください。
+`C:\xampp\sendmail\sendmail.ini` をテキストエディタで開いて、以下の設定項目を見つけてください。
 
 ```
 ; 実際には 4 つバラバラの位置にあります
@@ -84,7 +144,7 @@ auth_password=[Gmail のパスワード]
 ; 例: auth_password=password
 ```
 
-ここまでの変更で下準備は完了です。Apache を忘れずに再起動しておいてください。
+以上で下準備は完了です。Apache を忘れずに再起動しておいてください。
 
 [次へ進む](#basic)
 
