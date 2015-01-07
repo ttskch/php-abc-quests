@@ -42,3 +42,6 @@ $ git pull base master
 # 最新化したローカルリポジトリをリモートに push
 $ git push
 ```
+
+もし `git pull base master` を実行したときに、`Merge branch '〜〜〜'` というコミットメッセージが入力されている vi の画面になった場合は、
+そのまま `:q` でメッセージ入力を完了すれば正常に取り込みが行われます。
