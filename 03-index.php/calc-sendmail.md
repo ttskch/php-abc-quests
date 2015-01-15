@@ -12,6 +12,10 @@ PHP のプログラムからメールを送信するには、いくつかの下�
 なお、Mac, Windows どちらの場合も、Gmail の SMTP サーバを利用するため、Gmail アカウントが必要になります。
 Gmail アカウントを持っていない方は [こちらで](https://accounts.google.com/SignUp?service=mail&hl=ja) アカウントを取得しておいてください。
 
+> なお、Google アカウントで 2 段階認証を設定している場合は、通常のパスワードの代わりに `アプリ パスワード` が必要になります。
+> 2 段階認証を設定している Google アカウントを使用する場合は、[こちらで](https://security.google.com/settings/security/apppasswords) `アプリ パスワード` を作成してメモしておいてください。（[参考](https://support.google.com/accounts/answer/185833)）
+> また、以降の設定方法の説明に示す `Gmail のパスワード` は `アプリ パスワード` に読み替えて設定を実施してください。
+
 * [Mac の場合](#mac)
 * [Windows の場合](#win)
 
