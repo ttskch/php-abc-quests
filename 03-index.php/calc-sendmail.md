@@ -69,8 +69,8 @@ $ sudo vi /etc/postfix/sasl_passwd
 
 ```bash
 $ sudo postmap /etc/postfix/sasl_passwd
-$ ls rm /etc/postfix/sasl_passwd.db   # .db ファイルが作成されていることを確認
-$ sudo rm /etc/postfix/sasl_passwd    # もう用済みなので削除
+$ ls /etc/postfix/sasl_passwd.db     # .db ファイルが作成されていることを確認
+$ sudo rm /etc/postfix/sasl_passwd   # もう用済みなので削除
 ```
 
 #### 3. Postfix を再起動
@@ -183,11 +183,13 @@ auth_password=[Gmail のパスワード]
 
 冒頭の `if` 文の内側にメール送信処理を書いたので、パラメータ付きでアクセスされた（計算が行われた）ときにだけメールが送信されます。ブラウザで何か値を入力して `計算する` ボタンをクリックしてみてください。
 
-`簡易電卓プログラム <no-reply@example.com>` という差出人から、件名が `計算結果`、本文が入力した計算の結果となっているメールが届いたでしょうか。
+`簡易電卓プログラム` という差出人から、件名が `計算結果`、本文が入力した計算の結果となっているメールが届いたでしょうか。
 
-> ##### Windows の方へ
+> ##### 差出人メールアドレスについて
 >
-> Windows の場合、Gmail の SMTP サーバを使ってメールを送信しているので、Gmail の仕様により **差出人のメールアドレスは PHP 上で何を指定しても常にあなたの Gmail アドレスになってしまいます。**
+> 届いたメールの差出人メールアドレスは、PHP で指定した `no-reply@example.com` ではなく、あなたの Gmail アドレスになっていると思います。
+>
+> 今回の環境では Gmail の SMTP サーバを使ってメールを送信しているので、Gmail の仕様により **差出人のメールアドレスは PHP 上で何を指定しても常にあなたの Gmail アドレスになってしまいます。**
 > もう少し先へ進めばこの問題は解決しますので、今は気にしないでください :bow:
 
 ### 解説
