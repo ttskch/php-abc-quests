@@ -2,9 +2,9 @@
 
 ```php
 <?php
-$left = isset($_GET['left']) ? $_GET['left'] : '';
+$left = isset($_GET['left']) ? $_GET['left'] : null;
 $operator = isset($_GET['operator']) ? $_GET['operator'] : '+';
-$right = isset($_GET['right']) ? $_GET['right'] : '';
+$right = isset($_GET['right']) ? $_GET['right'] : null;
 
 if (!is_null($left) && !is_null($right)) {
     switch ($operator) {
