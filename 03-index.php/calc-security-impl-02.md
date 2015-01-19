@@ -2,7 +2,7 @@
 
 ```php
 <?php
-define('WEBMASTER_EMAIL', 'hogehoge@gmail.com');
+$settings = require __DIR__ . '/../../secret-settings.php';
 
 session_start();
 
@@ -26,7 +26,7 @@ switch (strtolower($_SERVER['REQUEST_METHOD'])) {
             ;
             mb_language('Japanese');
             mb_internal_encoding('UTF-8');
-            mb_send_mail(WEBMASTER_EMAIL, '簡易電卓プログラム記念報告', $body, 'From: ' . mb_encode_mimeheader('簡易電卓プログラム') . ' <me@example.com>');
+            mb_send_mail($settings['email'], '簡易電卓プログラム記念報告', $body, 'From: ' . mb_encode_mimeheader('簡易電卓プログラム') . ' <no-reply@example.com>');
         }
         break;
 

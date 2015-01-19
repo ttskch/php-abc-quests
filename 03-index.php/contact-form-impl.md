@@ -2,7 +2,7 @@
 
 ```php
 <?php
-define('WEBMASTER_EMAIL', 'hogehoge@gmail.com');
+$settings = require __DIR__ . '/../../secret-settings.php';
 
 session_start();
 
@@ -58,7 +58,7 @@ EOB;
 
         // サイト管理者宛ての通知メールを送信.
         $body = "以下のお客様からお問い合わせがありました。\n\n" . $content;
-        if (mb_send_mail(WEBMASTER_EMAIL, 'お問い合わせがありました', $body, 'From: ' . mb_encode_mimeheader('問い合わせフォーム') . ' <no-reply@example.com>')) {
+        if (mb_send_mail($settings['email'], 'お問い合わせがありました', $body, 'From: ' . mb_encode_mimeheader('問い合わせフォーム') . ' <no-reply@example.com>')) {
 
             // 通知メールの送信が成功した場合のみ自動返信メールを送信.
             $body = "以下の内容でお問い合わせを受け付けました。\n担当者より折り返しご連絡を差し上げますので、今しばらくお待ちください。\n\n" . $content;
