@@ -40,7 +40,7 @@ if (strtolower($_SERVER['REQUEST_METHOD']) === 'post') {
     }
 
     else {
-        $content = <<<EOB
+        $content = <<<EOT
 ------------------------------------------------------------
 お名前：{$name}
 ------------------------------------------------------------
@@ -51,7 +51,7 @@ if (strtolower($_SERVER['REQUEST_METHOD']) === 'post') {
 ご質問内容：
 {$message}
 ------------------------------------------------------------
-EOB;
+EOT;
 
         mb_language('Japanese');
         mb_internal_encoding('UTF-8');
@@ -155,7 +155,7 @@ function checkCsrfKey($key)
         <tbody>
         <tr>
             <th><span>*</span> お名前</th>
-            <td><input type="text" name="name" value="<?php echo h($name); ?>" placeholder="例）山田 太郎"  autofocus/></td>
+            <td><input type="text" name="name" value="<?php echo h($name); ?>" placeholder="例）山田 太郎" required autofocus/></td>
         </tr>
         <tr>
             <th><span>*</span> メールアドレス</th>
