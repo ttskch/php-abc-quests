@@ -98,7 +98,7 @@ Subject: お問い合わせがありがとうございました
 * 複数行のテキストを入力するフォーム項目には [`<textarea>`](http://www.htmq.com/html5/textarea.shtml) タグを使います
 * `<input type="">` には `"text"` 以外にも [様々なものが使えます](http://www.htmq.com/html5/input.shtml)
 * `<input placeholder="">` を使うとフォーム項目に [プレースホルダを設定できます](http://www.htmq.com/html5/input_placeholder.shtml)
-* PHP ではの正規表現によるパターンマッチには [preg_match()](http://php.net/manual/ja/function.preg-match.php) 関数を使います
+* PHP での正規表現によるパターンマッチには [preg_match()](http://php.net/manual/ja/function.preg-match.php) 関数を使います
 * `<input type="email">` を使えば、メールアドレスらしからぬ文字列を送信しようとしてもブラウザが送信をブロックしてくれます。ですが、HTML5 に対応していないブラウザ（IE9 以前など）ではこの機能は使えず、そのままサーバに送信されてしまいます。なので、入力値のチェックは PHP 側でもしっかりと実施する必要があります
 * `<input required>` を使えば必須扱いになるのも同様に、HTML5 非対応のブラウザでは動作しませんので、PHP 側でしっかりチェックしてください
 * 適宜 [CSS](http://www.htmq.com/csskihon/index.shtml) を使って見た目を調整して、できるだけ見栄えのよいフォームを目指してください
