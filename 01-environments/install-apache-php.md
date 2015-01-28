@@ -185,7 +185,7 @@ LoadModule php5_module libexec/apache2/libphp5.so
 ```
 
 という箇所を見つけて、以下のように変更してください。
-こうしておくと、ディレクトリにアクセスしたときに自動で `index.php` が表示されるようになります。
+こうしておくと、ブラウザからディレクトリにアクセスしたときに、自動で `index.php` が表示されるようになります。
 
 ```
 <IfModule dir_module>
@@ -193,7 +193,16 @@ LoadModule php5_module libexec/apache2/libphp5.so
 </IfModule>
 ```
 
-ここまでの変更を保存したら、Apache を再起動して変更内容を反映させてください。
+#### 設定の変更を反映させる
+
+ここまでの変更を保存したら、最後に、ドキュメントルートとして設定したディレクトリ（`~/workspace`）を実際に作成します。
+
+```bash
+$ cd ~
+$ mkdir workspace
+```
+
+作成したら、Apache を再起動して設定の変更内容を反映させてください。
 
 [次へ進む](#php)
 
@@ -219,7 +228,16 @@ DocumentRoot "C:/Users/あなたのユーザ名/workspace"
 
 > 既存の行を `#` でコメントアウトして、ホームディレクトリ直下の `workspace` というディレクトリがドキュメントルートになるように設定し直しています。
 
-変更内容を反映させるには Apache の再起動が必要です。この時点ではまだ Apache の起動には失敗すると思いますので、ひとまず Apache を終了しておいてください。
+#### 設定の変更を反映させる
+
+ここまでの変更を保存したら、最後に、ドキュメントルートとして設定したディレクトリ（`~/workspace`）を実際に作成します。
+
+```bash
+$ cd ~
+$ mkdir workspace
+```
+
+作成したら、Apache を再起動して設定の変更内容を反映させてください。
 
 [次へ進む](#php)
 
@@ -228,14 +246,7 @@ DocumentRoot "C:/Users/あなたのユーザ名/workspace"
 
 ここまでで、PHP が実行可能な Web サーバの構築が完了しました。次は実際に動かしてみましょう。
 
-まずは、ドキュメントルートとして設定したディレクトリ（`~/workspace`）を実際に作成する必要があります。
-
-```bash
-$ cd ~
-$ mkdir workspace
-```
-
-次に、ドキュメントルート（`~/workspace`）直下に `index.php` というファイルを作成して、以下の内容を記述してください。
+ドキュメントルート（`~/workspace`）直下に `index.php` というファイルを作成して、以下の内容を記述してください。
 
 ```php
 <?php
@@ -245,6 +256,6 @@ phpinfo();
 
 これを保存したら、ブラウザで [http://localhost](http://localhost) にアクセスしてみてください。
 
-[こんな感じの画面](https://www.google.co.jp/search?q=phpinfo&tbm=isch#tbm=isch&q=phpinfo&imgdii=_) が表示されれば OK です。
+[こんな感じの画面](https://www.google.co.jp/search?q=phpinfo&tbm=isch) が表示されれば OK です。
 
 [phpinfo](http://php.net/manual/ja/function.phpinfo.php) という PHP の組み込み関数を実行した結果を表示する、最も基礎的な Web アプリの実行に成功しました！おめでとうございます！
