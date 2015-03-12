@@ -138,7 +138,7 @@ function checkCsrfKey($key)
             <td><input type="email" name="email" value="<?php echo h($email); ?>" placeholder="例）email@example.com" required/></td>
         </tr>
 -         <tr>
-+         <tr class="for-mquestion">
++         <tr class="for-question">
             <th>お電話番号</th>
             <td><input type="tel" name="tel" value="<?php echo h($tel); ?>" placeholder="例）090-1234-5678"/></td>
         </tr>
