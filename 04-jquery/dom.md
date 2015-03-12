@@ -148,8 +148,6 @@ $('#target').text('変更されました！');
 という簡潔な書き方で DOM の操作ができるようになっているのです。これが、かの有名な [jQuery](http://ja.wikipedia.org/wiki/JQuery) です。
 
 > [//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js](//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js) は、Google の [CDN](http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%83%87%E3%83%AA%E3%83%90%E3%83%AA%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF) がホストしてくれている jQuery のバージョン 1.11.1 のファイルの URL です。
-> 
-> この使い方だと、ページを表示するために毎回 Google のコンテンツサーバと HTTP 通信する必要があって読み込みが遅くなるので、通常は jQuery のファイルをローカルサーバ上に置いて使います。
 
 jQuery は、DOM 操作などブラウザ上で使うための JavaScript コードをより簡単に書けるようにするためのライブラリです。現在の JavaScript のデファクトスタンダード的な存在で、ほとんどの Web サイトで利用されています。
 
