@@ -29,7 +29,7 @@
 
 ```bash
 $ cd ~/workspace/php-abc-quests
-$ git remote add base https://github.com/qckanemoto/php-abc-quests.git
+$ git remote add base https://github.com/ttskch/php-abc-quests.git
 ```
 
 ### 実際に更新を取り込む作業

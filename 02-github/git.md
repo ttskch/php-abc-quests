@@ -108,7 +108,7 @@ Git では、Git の管理下に置かれた、あなたが実際に作業して
 
 ```bash
 $ cd ~/workspace
-$ git clone https://github.com/qckanemoto/php-abc-quests.git
+$ git clone https://github.com/ttskch/php-abc-quests.git
 $ cd php-abc-quests
 ```
 

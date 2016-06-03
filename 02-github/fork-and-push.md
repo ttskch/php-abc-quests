@@ -2,7 +2,7 @@
 
 GitHub のアカウントができたので、記念すべき最初のリポジトリを作ってみましょう。
 
-全く新しいプロジェクトを始める場合は空のリポジトリを作って開発を始めるのが普通ですが、php-abc-quests では、あなたの GitHub アカウント上に [qckanemoto/php-abc-quest](https://github.com/qckanemoto/php-abc-quest) のコピーを作成して、そこで課題のソースコードを管理していきます。
+全く新しいプロジェクトを始める場合は空のリポジトリを作って開発を始めるのが普通ですが、php-abc-quests では、あなたの GitHub アカウント上に [ttskch/php-abc-quest](https://github.com/ttskch/php-abc-quest) のコピーを作成して、そこで課題のソースコードを管理していきます。
 
 このように、GitHub では他人のリポジトリを自分のアカウント配下にコピーしてくることができ、これを **fork（フォーク）する** と言います。
 
@@ -24,7 +24,7 @@ $ git config --global color.ui auto
 $ git config --global core.quotepath false
 ```
 
-## qckanemoto/php-abc-quests を fork してみる
+## ttskch/php-abc-quests を fork してみる
 
 では、本題に戻ります。
 
