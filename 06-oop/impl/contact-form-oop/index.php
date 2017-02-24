@@ -1,9 +1,10 @@
 <?php
 
 require_once __DIR__ . '/src/InputReader.php';
-require_once __DIR__ . '/src/Validator.php';
 require_once __DIR__ . '/src/Mailer.php';
+require_once __DIR__ . '/src/Template.php';
 require_once __DIR__ . '/src/Utility.php';
+require_once __DIR__ . '/src/Validator.php';
 
 $settings = require __DIR__ . '/../secret-settings.php';
 

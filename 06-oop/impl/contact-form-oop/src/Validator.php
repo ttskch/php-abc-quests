@@ -2,7 +2,8 @@
 
 class Validator
 {
-    public function validateEmail($email)
+    public function isValidEmail($email)
     {
+        return preg_match('/^[a-zA-Z0-9\.-_]+@[a-zA-Z0-9\.-_]+$/', $email);
     }
 }
